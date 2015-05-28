@@ -1,0 +1,178 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp"
+            android:padding="20dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="@string/form_title"
+                    android:layout_weight="9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/cart"
+                    android:contentDescription="" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:hint="@string/form_card_number"
+                    android:layout_weight="8"
+                    android:layout_width="0dp"
+                    android:maxLength="16"
+                    android:numeric="integer"
+                    android:text="4012001038443335"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/card_number" />
+
+                <EditText
+                    android:hint="@string/form_card_cvv"
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:maxLength="3"
+                    android:numeric="integer"
+                    android:text="123"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/card_cvv" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:hint="@string/form_card_expire_at_month"
+                    android:text="05"
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:maxLength="2"
+                    android:numeric="integer"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/card_month" />
+
+                <EditText
+                    android:hint="@string/form_card_expire_at_year"
+                    android:text="2018"
+                    android:layout_weight="7"
+                    android:layout_width="0dp"
+                    android:maxLength="4"
+                    android:numeric="integer"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/card_year" />
+            </LinearLayout>
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <RadioButton android:id="@+id/radio_visa"
+                    android:layout_width="wrap_content"
+                    android:checked="true"
+                    android:layout_height="wrap_content"
+                    android:text="@string/visa"/>
+                <RadioButton android:id="@+id/radio_master"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/master"/>
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_gravity="right"
+                android:background="@drawable/button_custom"
+                android:textColor="@color/white"
+                android:text="@string/form_button"
+                android:layout_width="wrap_content"
+                android:onClick="pay"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/server_response"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/response_layout"
+            android:background="@color/white_1"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/response_text"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:layout_gravity="right"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_2"
+            android:contentDescription="" />
+
+    </LinearLayout>
+</RelativeLayout>

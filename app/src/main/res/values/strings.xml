@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">GnSdkSample</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="form_title">Checkout page</string>
+    <string name="form_card_number">Card Number</string>
+    <string name="form_card_cvv">CVV</string>
+    <string name="form_card_expire_at_month">Month</string>
+    <string name="form_card_expire_at_year">Year</string>
+    <string name="form_button">Pay</string>
+    <string name="visa">Visa</string>
+    <string name="master">Master</string>
+    <string name="server_response">Server response</string>
+</resources>
